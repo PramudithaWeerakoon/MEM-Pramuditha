@@ -1,0 +1,403 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font: 400 15px/1.8;
+    color: #777;
+    font: 400 15px/1.8 "Poppins";
+    color: rgb(97, 97, 97);
+}
+header .navigation a:hover {
+    position: relative;
+    color: aqua;
+}
+
+header .navigation .navigation-items a {
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before {
+    content: '';
+    position: absolute;
+    background: rgb(6, 184, 255);
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before {
+    width: 100%;
+    background-color: #7126e9;
+}
+
+header .navigation a:hover {
+    color: aqua;
+}
+
+header {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    transition: 0.5s ease;
+}
+/* Define the initial styling for the image */
+.invert-on-hover {
+    filter: invert(0%); /* Set the initial inversion to 0% (no inversion) */
+    transition: filter 0.3s; /* Add a transition for a smooth effect */
+}
+
+/* Apply the inversion when hovering over the image */
+.invert-on-hover:hover {
+    filter: invert(100%); /* Invert the image to 100% when hovering */
+}
+
+header .brand {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* Basic styling for the navigation menu */
+.navigation {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.navigation-items a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+    padding: 5px 20px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+/* Add hover effect */
+.navigation-items a:hover {
+    background-color: #555;
+}
+
+/* Add animation to the navigation menu items */
+.navigation-items a {
+    transition: transform 0.3s ease;
+}
+
+.navigation-items a:hover {
+    transform: scale(1.1);
+}
+
+section {
+    padding: 100px 200px;
+}
+
+.slider-navigation {
+    z-index: 888;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(80px);
+    margin-bottom: 12px;
+}
+
+.slider-navigation .nav-btn {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+}
+
+.slider-navigation .nav-btn.active {
+    background: #7126e9;
+}
+
+.slider-navigation .nav-btn:not(:last-child) {
+    margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:hover {
+    transform: scale(1.2);
+}
+.txt{
+font-size: 20px;
+    font-family:Ebrima;
+}
+.bgimg-1,
+.bgimg-2,
+.bgimg-3,
+.bgimg-4,
+.bgimg-5,
+.bgimg-6 {
+    position: relative;
+    opacity: 0.75;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Define the keyframes for the progress animation */
+@keyframes progress {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Apply styles to the progress bar container */
+.progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #333;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* Apply styles to the progress bar */
+.progress-bar {
+    height: 100%;
+    background-color: #4CAF50;
+    animation: progress 2s ease-in-out forwards; /* Adjust the duration and timing function as needed */
+}
+
+/* Additional styling for the rest of the content */
+body {
+    margin: 0;
+    padding: 0;
+    height: 200vh; /* Adjust this height as needed */
+}
+
+.bgimg-3 {
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+.caption {
+    text-align: center;
+    padding: 20px;
+}
+
+.border {
+    border: 2px solid #333;
+    padding: 10px;
+}
+.bgimg-1 {
+    background-image: url("2.jpg");
+    min-height: 100%;
+}
+
+.bgimg-2 {
+    background-image: url("1.jpg");
+    min-height: 500px;
+}
+
+.bgimg-3 {
+    background-image: url("3.jpg");
+    min-height: 500px;
+}
+
+.bgimg-4 {
+    background-image: url("4.jpg");
+    min-height: 500px;
+}
+
+.bgimg-5 {
+    background-image: url("5.jpg");
+    min-height: 500px;
+}
+
+.bgimg-6 {
+    background-image: url("6.jpg");
+    min-height: 500px;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+.caption span.border {
+    background-color: rgba(78, 78, 78, 0.685);
+    color: #fff;
+    padding: 18px;
+    font-size: 60px;
+    letter-spacing: 10px;
+    border-radius: 25px;
+    width: 200px;
+    height: 100px;
+}
+
+h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px;
+}
+
+
+/* Turn off parallax scrolling for tablets and phones */
+
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3,
+    .bgimg-4,
+    .bgimg-5,
+    .bgimg-6 {
+        background-attachment: scroll;
+    }
+}
+
+<!--Menu and Socila icon CSS-->* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 76%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+}
+
+header .brand {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header .navigation {
+    position: relative;
+}
+
+header .navigation a:hover {
+    position: relative;
+    color: aqua;
+}
+
+header .navigation .navigation-items a {
+    position: relative;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 590;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+header .navigation .navigation-items a:before {
+    content: '';
+    position: absolute;
+    background: rgb(6, 184, 255);
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before {
+    width: 80%;
+    background-color: #7126e9;
+}
+
+header .navigation a:hover {
+    color: aqua;
+}
+
+.button1 {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #286fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    margin-left: 48%;
+    margin-top: 10%;
+}
+
+.button1:hover {
+    background-color: rgb(21, 255, 255)
+}
+
+.button1:active {
+    background-color: #286fff;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
+/* Social Icon Design*/
+
+.fa {
+    padding: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 60%;
+}
+
+.fa:hover {
+    opacity: 0.8;
+    background-color: rgb(0, 255, 255);
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-instagram {
+    background: #8a3ab9;
+    color: white;
+}
+
+.fa-whatsapp {
+    background: #075e54;
+    color: white;
+}
