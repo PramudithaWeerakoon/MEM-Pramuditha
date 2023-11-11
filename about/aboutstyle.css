@@ -73,50 +73,6 @@ header .brand {
     text-decoration: none;
 }
 
-/* Basic styling for the navigation menu */
-.navigation {
-    background-color: #333;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.navigation-items a {
-    text-decoration: none;
-    color: #fff;
-    margin: 0 10px;
-    padding: 5px 20px;
-    border-radius: 3px;
-    transition: background-color 0.3s ease;
-}
-
-/* Add hover effect */
-.navigation-items a:hover {
-    background-color: #555;
-}
-
-/* Add animation to the navigation menu items */
-.navigation-items a {
-    transition: transform 0.3s ease;
-}
-
-.navigation-items a:hover {
-    transform: scale(1.1);
-}
-
-section {
-    padding: 100px 200px;
-}
-
-.slider-navigation {
-    z-index: 888;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateY(80px);
-    margin-bottom: 12px;
-}
 
 .slider-navigation .nav-btn {
     width: 12px;
@@ -400,4 +356,148 @@ header .navigation a:hover {
 .fa-whatsapp {
     background: #075e54;
     color: white;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+.small_txt{
+    font-style: normal;
+    font-family: Bahnschrift;
+    font-size: 20px;
+}
+header .navigation a:hover {
+    position: relative;
+    color: aqua;
+}
+
+header .navigation .navigation-items a {
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before {
+    content: '';
+    position: absolute;
+    background: rgb(6, 184, 255);
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before {
+    width: 100%;
+    background-color: #7126e9;
+}
+
+header .navigation a:hover {
+    color: aqua;
+}
+
+header {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+}
+/* Define the initial styling for the image */
+.invert-on-hover {
+    filter: invert(0%); /* Set the initial inversion to 0% (no inversion) */
+    transition: filter 0.3s; /* Add a transition for a smooth effect */
+}
+
+/* Apply the inversion when hovering over the image */
+.invert-on-hover:hover {
+    filter: invert(100%); /* Invert the image to 100% when hovering */
+}
+
+header .brand {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* Basic styling for the navigation menu */
+.navigation {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.navigation-items a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+    padding: 5px 20px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+.slider-navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.nav-btn {
+    width: 20px;
+    height: 20px;
+    background-color: #aaa;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-btn.active {
+    background-color: #3498db;
+}
+
+/* Add animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Apply animation to active button */
+.nav-btn.active {
+    animation: bounce 1s infinite;
+}
+
+/* Add hover effect */
+.navigation-items a:hover {
+    background-color: #555;
+}
+
+/* Add animation to the navigation menu items */
+.navigation-items a {
+    transition: transform 0.3s ease;
+}
+
+.navigation-items a:hover {
+    transform: scale(1.1);
 }
